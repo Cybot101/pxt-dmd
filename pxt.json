@@ -23,6 +23,5 @@
                 }
             }
         }
-    },
-    "installedVersion": "file:../pxt-dmd"
+    }
 }
