@@ -1,0 +1,28 @@
+{
+    "name": "dmd-display",
+    "version": "0.10.6",
+    "description": "Big LED DMD Display",
+    "files": [
+        "README.md",
+        "enums.d.ts",
+        "shims.d.ts",
+        "dmd.cpp"
+    ],
+    "testFiles": [
+    ],
+    "public": true,
+    "targetVersion": "0.0.1",
+    "dependencies": {
+        "core": "*"
+    },
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "interface": {
+                    "fs": 1
+                }
+            }
+        }
+    },
+    "installedVersion": "file:../pxt-dmd"
+}
