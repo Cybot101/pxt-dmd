@@ -4,9 +4,7 @@
     "description": "Big LED DMD Display",
     "files": [
         "README.md",
-        "enums.d.ts",
-        "shims.d.ts",
-        "dmd.cpp"
+        "dmd.ts"
     ],
     "testFiles": [
     ],
