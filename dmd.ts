@@ -34,7 +34,7 @@
       * @param height Number of displays tall (1, 2)
       */
      //% block="configure screen width %width height %height"
-     //% width.min=1 width.max=2 width.delf=1
+     //% width.min=1 width.max=2 width.defl=1
      //% height.min=1 height.max=2 height.defl=1
      //% width.fieldOptions.precision=1
      //% height.fieldOptions.precision=1
@@ -66,7 +66,7 @@
       * @param y Y location
       * @param colour Colour (0 = off, 1 = on)
       */
-     //% block="draw point|x %x|y %y|colour %colour"
+     //% block="draw point|x %x y %y|colour %colour"
      //% x.min=0 y.min=0
      //% x.fieldOptions.precision=1 y.fieldOptions.precision=1
      //% colour.fieldOptions.precision=1
@@ -88,7 +88,7 @@
       * @param r Radius
       * @param colour Colour (0 = off, 1 = on)
       */
-     //% block="draw circle|x %x|y %y|radius %r|fill? %fill|colour %colour"
+     //% block="draw circle|x %x y %y|radius %r|fill? %fill|colour %colour"
      //% x.min=0 y.min=0 r.min=1 r.max=31
      //% x.fieldOptions.precision=1 y.fieldOptions.precision=1 r.fieldOptions.precision=1
      //% colour.fieldOptions.precision=1
@@ -114,7 +114,7 @@
       * @param fill Filled rectangle?
       * @param colour Colour (0 = off, 1 = on)
       */
-     //% block="draw rectangle|start x %x1|start y %y1|end x %x2|end y %y2|fill? %fill|colour %colour"
+     //% block="draw rectangle|start x %x1 start y %y1|end x %x2 end y %y2|fill? %fill|colour %colour"
      //% x1.min=0 y1.min=0
      //% x2.min=0 y2.min=0
      //% colour.min=0 colour.max=1
@@ -142,7 +142,7 @@
       * @param y3 Second Y location
       * @param colour Colour (0 = off, 1 = on)
       */
-     //% block="draw line|start x %x1|start y %y1|end x %x2|end y %y2|colour %colour"
+     //% block="draw line|start x %x1 start y %y1|end x %x2 end y %y2|colour %colour"
      //% x1.min=0 y1.min=0
      //% x2.min=0 y2.min=0
      //% x1.fieldOptions.precision=1 y1.fieldOptions.precision=1
@@ -167,7 +167,7 @@
       * @param text Text to display
       * @param colour Colour (0 = off, 1 = on)
       */
-     //% block="draw text|x %x|y %y|text %text|colour %colour"
+     //% block="draw text|x %x y %y|text %text|colour %colour"
      //% x.min=0 y.min=0 text.maxLength=6
      //% x.fieldOptions.precision=1 y.fieldOptions.precision=1
      //% colour.min=0 colour.max=1
