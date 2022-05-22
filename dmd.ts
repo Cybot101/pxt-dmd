@@ -33,9 +33,9 @@
       * @param width Number of displays wide (1, 2)
       * @param height Number of displays tall (1, 2)
       */
-     //% block="configure screen width %width"|height %height
-     //% width.min=1 width.max=2
-     //% height.min=1 height.max=2
+     //% block="configure screen width %width height %height"
+     //% width.min=1 width.max=2 width.delf=1
+     //% height.min=1 height.max=2 height.defl=1
      //% width.fieldOptions.precision=1
      //% height.fieldOptions.precision=1
      export function configureScreen(width: number = 1, height: number = 1): void {
