@@ -17,7 +17,7 @@
      G_INIT
  }
  
-enum NeoPixelColors {
+enum PixelColors {
     //% block=black
     G_Black = 0,
     //% block=red
