@@ -19,21 +19,21 @@
  
 enum NeoPixelColors {
     //% block=black
-    Black = 0,
+    G_Black = 0,
     //% block=red
-    Red = 1,
+    G_Red = 1,
     //% block=purple
-    Purple = 2,
+    G_Purple = 2,
     //% block=yellow
-    Yellow = 3,
+    G_Yellow = 3,
     //% block=green
-    Green = 4,
+    G_Green = 4,
     //% block=cyan
-    Cyan = 5,
+    G_Cyan = 5,
     //% block=blue
-    Blue = 6,
+    G_Blue = 6,
     //% block=white
-    White = 7
+    G_White = 7
 }
  /**
   * Custom blocks
