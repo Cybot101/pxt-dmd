@@ -17,11 +17,24 @@
      G_INIT
  }
  
- enum G_COLOUR {
-     G_BLACK,
-     G_RED
- }
- 
+enum NeoPixelColors {
+    //% block=black
+    Black = 0,
+    //% block=red
+    Red = 1,
+    //% block=purple
+    Purple = 2,
+    //% block=yellow
+    Yellow = 3,
+    //% block=green
+    Green = 4,
+    //% block=cyan
+    Cyan = 5,
+    //% block=blue
+    Blue = 6,
+    //% block=white
+    White = 7
+}
  /**
   * Custom blocks
   */
@@ -50,7 +63,7 @@
       * Fill the whole screen
       * @param colour Colour (0 = off, 1 = on)
       */
-     //% block="fill screen with|colour %colour"
+     //% block="fill screen with|colour %colour=pixel_colors"
      //% colour.min=0 colour.max=1
      //% colour.fieldOptions.precision=1
      export function fillScreen(colour: number): void {
@@ -66,7 +79,7 @@
       * @param y Y location
       * @param colour Colour (0 = off, 1 = on)
       */
-     //% block="draw point|x %x y %y|colour %colour"
+     //% block="draw point|x %x y %y|colour %colour=pixel_colors"
      //% x.min=0 y.min=0
      //% x.fieldOptions.precision=1 y.fieldOptions.precision=1
      //% colour.fieldOptions.precision=1
@@ -88,7 +101,7 @@
       * @param r Radius
       * @param colour Colour (0 = off, 1 = on)
       */
-     //% block="draw circle|x %x y %y|radius %r|fill? %fill|colour %colour"
+     //% block="draw circle|x %x y %y|radius %r|fill? %fill|colour %colour=pixel_colors"
      //% x.min=0 y.min=0 r.min=1 r.max=31
      //% x.fieldOptions.precision=1 y.fieldOptions.precision=1 r.fieldOptions.precision=1
      //% colour.fieldOptions.precision=1
@@ -114,7 +127,7 @@
       * @param fill Filled rectangle?
       * @param colour Colour (0 = off, 1 = on)
       */
-     //% block="draw rectangle|start x %x1 start y %y1|end x %x2 end y %y2|fill? %fill|colour %colour"
+     //% block="draw rectangle|start x %x1 start y %y1|end x %x2 end y %y2|fill? %fill|colour %colour=pixel_colors"
      //% x1.min=0 y1.min=0
      //% x2.min=0 y2.min=0
      //% colour.min=0 colour.max=1
@@ -142,7 +155,7 @@
       * @param y3 Second Y location
       * @param colour Colour (0 = off, 1 = on)
       */
-     //% block="draw line|start x %x1 start y %y1|end x %x2 end y %y2|colour %colour"
+     //% block="draw line|start x %x1 start y %y1|end x %x2 end y %y2|colour %colour=pixel_colors"
      //% x1.min=0 y1.min=0
      //% x2.min=0 y2.min=0
      //% x1.fieldOptions.precision=1 y1.fieldOptions.precision=1
@@ -167,7 +180,7 @@
       * @param text Text to display
       * @param colour Colour (0 = off, 1 = on)
       */
-     //% block="draw text|x %x y %y|text %text|colour %colour"
+     //% block="draw text|x %x y %y|text %text|colour %colour=pixel_colors"
      //% x.min=0 y.min=0 text.maxLength=6
      //% x.fieldOptions.precision=1 y.fieldOptions.precision=1
      //% colour.min=0 colour.max=1
@@ -185,6 +198,15 @@
          buf[8] = text.charCodeAt(4);
          buf[9] = text.charCodeAt(5);
          pins.i2cWriteBuffer(i2cAddr, buf);
+     }
+  
+     /**
+      * Gets the RGB value of a known color
+     */
+     //% weight=2 blockGap=8
+     //% blockId="pixel_colors" block="%color"
+     export function colors(color: PixelColors): number {
+         return color;
      }
  }
  
